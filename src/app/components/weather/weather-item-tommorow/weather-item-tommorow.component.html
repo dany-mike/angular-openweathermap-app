@@ -1,0 +1,46 @@
+<!-- <div class="card max-width center-card">
+    <div class="card-header">
+        <p class="card-header-title">
+            {{weatherItemT.name | uppercase}}
+        </p>
+    </div>
+    <div class="card-image">
+        <figure class="image is-128x128">
+            <img src="http://openweathermap.org/img/w/{{weatherItemT.weather[0].icon}}.png" alt="temp Icon" class="center-image">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="content">
+            <p class="big-size center">
+                {{weatherItemT.weather[0].description | uppercase}}
+            </p>
+            <span class="temp-size center">{{weatherItemT.main.temp}}°Celsius</span>
+            <br>
+        </div>
+
+    </div>
+</div> -->
+<div class="card max-width center-card">
+    <div class="card-header">
+        <p class="card-header-title">
+            {{city.city.name | uppercase}}
+        </p>
+    </div>
+    <div class="card-image">
+        <figure class="image is-128x128">
+            <img src="http://openweathermap.org/img/w/{{city.list[8].weather[0].icon}}.png" alt="temp Icon" class="center-image">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="content">
+            <p class="big-size center">
+                {{ city.list[8].weather[0].description | uppercase}}
+            </p>
+            <span class="temp-size center">{{ city.list[8].main.temp }}°Celsius</span>
+            <br>
+            <p class="center big-size">
+                {{ tommorow | date: 'EEE' }}
+            </p>
+        </div>
+    </div>
+</div>

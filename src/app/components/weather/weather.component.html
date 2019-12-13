@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-content">
+        <input class="input" type="text" placeholder="Write the name of a city" #cityName>
+        <hr>
+        <button class="button is-link" (click)="getWeatherByCity(cityName.value)">Click to know the weather</button>
+        <div>
+            <hr>
+            <app-weather-item [weatherItem]="weather" *ngIf="display"></app-weather-item>
+        </div>
+        <button (click)="getWeatherOfTommorow(cityName.value)" class="button is-info" *ngIf="display" [disabled]="disabled">Prevision for tommorow.</button>
+        <div>
+            <hr>
+            <app-weather-item-tommorow [city]="weatherT" *ngIf="displayT"></app-weather-item-tommorow>
+        </div>
+    </div>
+</div>
+<hr>
